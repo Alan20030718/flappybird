@@ -1,29 +1,51 @@
 #include "Game.h"
 #include <iostream>
 using namespace sf;
+extern bool gameActive;
 Game::Game(RenderWindow* window) 
-{
+{   
+    //this->sp = sp;
     this->window = window;
     this->window->setFramerateLimit(60);
-    birdTexture.loadFromFile("Textures/background-day.png");
-    //init bird
-    bird = new Bird(&this->birdTexture);
-    //bird->Update();
+    birdTexture.loadFromFile("Textures/bluebird-midflap.png");
+    //texture_bg.loadFromFile("Textures/background-day.png");
+    this->players.push_back(Bird(&birdTexture));
+    //bird = new Bird(&this->birdTexture);
+    //rd2 = new Bird(&this->birdTexture);
 }
 
 Game::~Game() 
 {
-    delete bird;
+    //for (int i = 0; i < players.size(); i++)
+    //{
+       // delete &this->players[i];
+    //}
+    //delete bird2;
 }
 
 void Game::Update() 
 {
-    bird->Update();
+    for (int i = 0; i < players.size(); i++)
+    {
+        this->players[i].Update();
+    }
+   
+}
+
+void Game::reset()
+{
+    for (int i = 0; i < players.size(); i++)
+    {
+        this->players[i].reset();
+    }
 }
 
 void Game::Draw() 
 {
-    window->clear();
-    bird->Draw(*window);
-    window->display();
+   //window->clear();
+   for (int i = 0; i < players.size(); i++)
+   {
+       this->players[i].Draw(*this->window);
+   }
+  // window->display();
 }
