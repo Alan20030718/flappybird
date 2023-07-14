@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
@@ -12,7 +11,8 @@ class Game
 private:
     RenderWindow* window;
     std::vector<Bird> players;
-
+    Texture pipe_t;
+    Sprite pipe_s;
     Texture birdTexture;
     Sprite sprite_bg;
     int sp;

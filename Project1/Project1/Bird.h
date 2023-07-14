@@ -17,8 +17,8 @@ private:
     Texture* texture_bg;
     RectangleShape hitBox;
     int level; 
-    int score;
     int hp;
+    int score;
     
 
 public:

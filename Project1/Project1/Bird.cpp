@@ -10,8 +10,8 @@ Bird::Bird(Texture* texture, int UP)
 {
     this->texture = texture;
     this->sprite.setTexture(*this->texture);
-    this->sprite.setScale(2.5, 2.5);\
-    this->sprite.setPosition(150, 512);
+    this->sprite.setScale(2.5, 2.5);
+    this->sprite.setPosition(125, 490);
     Bird::playerNr++;
     this->playerNumber = Bird::playerNr;
 }
@@ -24,30 +24,30 @@ void Bird::Update() {
 }
 
 void Bird::Draw(RenderTarget& target) {
+   
+    //target.draw(this->sprite);
     sf::Vector2f targetSize(576.0f, 1024.0f);
 
-    
-    this->sprite_bg.setScale(
-        targetSize.x / this->sprite_bg.getLocalBounds().width,
-        targetSize.y / this->sprite_bg.getLocalBounds().height);
-    target.draw(this->sprite);
-    //target.draw(this->sprite);
 
+    //this->sprite_bg.setScale(
+        //targetSize.x / this->sprite_bg.getLocalBounds().width,
+        //targetSize.y / this->sprite_bg.getLocalBounds().height);
+    target.draw(this->sprite);
 }
 void Bird::reset()
 {
-    this->sprite.setPosition(150, 512);
+    this->sprite.setPosition(125, 490);
 }
 void Bird::Movement() {
     bird_movement += 0.75;
     this->sprite.move(0.0f, bird_movement);
-    std::cout << sprite.getPosition().y;
-    if (sprite.getPosition().y < 1.25 || sprite.getPosition().y >1024) {
+    //std::cout << sprite.getPosition().y;
+    if (sprite.getPosition().y < 1.25 || sprite.getPosition().y >850) {
         gameOver = true;
         gameActive = false;
     }
-    if (gameActive) {
-        std::cout << "gameActive" << "\n";
-    }
+    //if (gameActive) {
+     //   std::cout << "gameActive" << "\n";
+    //}
     
 }
