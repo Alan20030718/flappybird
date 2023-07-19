@@ -29,6 +29,8 @@ public:
     void Update();
     void reset();
     void Movement();
+    FloatRect get_Loc();
+    Vector2f get_Pos();
     void Draw(RenderTarget& target);
     //accessors
     static unsigned playerNr;

@@ -31,15 +31,27 @@ void Bird::Draw(RenderTarget& target) {
 void Bird::reset()
 {
     this->sprite.setPosition(125, 490);
+    bird_movement = -10;
 }
 
 void Bird::Movement() {
     bird_movement += 0.75;
     this->sprite.move(0.0f, bird_movement);
-    //check if bird collides with bounds
-    if (sprite.getPosition().y < 1.25 || sprite.getPosition().y >850) {
+
+    /*********** check if bird collides with bounds *********/
+    if (sprite.getPosition().y < 1.25 || sprite.getPosition().y >850-sprite.getGlobalBounds().height) {
         gameOver = true;
         gameActive = false;
     }
     
+}
+
+FloatRect Bird::get_Loc() 
+{
+    return this->sprite.getGlobalBounds();
+}
+
+Vector2f Bird::get_Pos() 
+{
+    return this->sprite.getPosition();
 }

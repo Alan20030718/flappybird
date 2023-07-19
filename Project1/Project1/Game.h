@@ -24,6 +24,8 @@ public:
     void Update();
     void Draw();
     void reset();
+    FloatRect get_Bird();
+    Vector2f get_Pos();
     //accessors
     inline RenderWindow& getWindow() {
         return *this->window;

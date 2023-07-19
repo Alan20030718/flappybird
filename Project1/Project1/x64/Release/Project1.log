@@ -1,10 +1,7 @@
-﻿  Pipe.cpp
-D:\Project1\Project1\Pipe.cpp(34,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Project1\Project1\Pipe.cpp(35,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  main.cpp
-D:\Project1\Project1\main.cpp(27,25): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+﻿  main.cpp
+D:\Project1\Project1\main.cpp(40,25): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating code
-  3 of 294 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
+  1 of 419 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     3 functions had inline decision re-evaluated but remain unchanged
   Finished generating code

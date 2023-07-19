@@ -38,3 +38,20 @@ void Game::Draw()
        this->players[i].Draw(*this->window);
    }
 }
+
+
+FloatRect Game::get_Bird()
+{
+    for (int i = 0; i < players.size(); i++)
+    {
+        return this->players[i].get_Loc();
+    }
+}
+
+Vector2f Game::get_Pos()
+{
+    for (int i = 0; i < players.size(); i++)
+    {
+        return this->players[i].get_Pos();
+    }
+}
