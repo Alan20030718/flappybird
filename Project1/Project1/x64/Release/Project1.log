@@ -1,8 +1,13 @@
-﻿  main.cpp
-D:\Project1\Project1\main.cpp(40,25): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+﻿  Bird.cpp
+D:\Project1\Project1\Bird.cpp(53,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Game.cpp
+  main.cpp
+D:\Project1\Project1\main.cpp(41,25): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating code
-  1 of 419 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    3 functions had inline decision re-evaluated but remain unchanged
+D:\Project1\Project1\Game.cpp(76): warning C4715: 'Game::get_Pos': not all control paths return a value
+D:\Project1\Project1\Game.cpp(67): warning C4715: 'Game::get_Bird': not all control paths return a value
+  179 of 476 functions (37.6%) were compiled, the rest were copied from previous compilation.
+    69 functions were new in current compilation
+    39 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Project1.vcxproj -> D:\Project1\x64\Release\Project1.exe

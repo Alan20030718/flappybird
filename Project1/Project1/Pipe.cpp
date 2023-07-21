@@ -12,33 +12,29 @@ Pipe::~Pipe() {
 
 }
 
+//Pipe update
 void Pipe::updatePipe() {
 
     for (int i = 0; i < PIPE.size(); i++) {
         if (PIPE[i].first.getPosition().x < 0 - PIPE[i].first.getGlobalBounds().width) {
-            auto itor = PIPE.erase(PIPE.begin() + i);
-            
+            auto itor = PIPE.erase(PIPE.begin() + i); 
         }
         else {
             PIPE[i].first.move(-2, 0);
             PIPE[i].second.move(-2, 0);
         }
-
     }
     for (int i = 0; i < PIPE_sc.size(); i++) {
         if (PIPE_sc[i].getPosition().x < 0 - PIPE_sc[i].getGlobalBounds().width) {
             auto itor = PIPE_sc.erase(PIPE_sc.begin() + i);
-
         }
         else {
             PIPE_sc[i].move(-2, 0);
         }
-
     }
-   
-
 }
 
+//Spawn pipes
 void Pipe::createPipe(Texture* texture1, Texture* texture2) {
     int _landHeight = 200;
     Sprite pipe_t(*texture1), pipe_b(*texture2), pipe_sc;
@@ -52,7 +48,7 @@ void Pipe::createPipe(Texture* texture1, Texture* texture2) {
     PIPE_sc.push_back(pipe_sc);
 }
 
-
+//Draw pipes
 void Pipe::DrawPipe(RenderTarget& target)
 {
     for (int i = 0; i < PIPE.size(); i++) {

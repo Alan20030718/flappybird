@@ -19,19 +19,20 @@ private:
     int level; 
     int hp;
     int score;
-    
+    unsigned int anim_itor;
+    Clock _clock;
+    std::vector<Texture> anim_frame;
 
 public:
-    //Bird(Texture* texture);
-    //constructor for other control
-    Bird(Texture* texture, int UP = 57);
+    Bird(std::vector<Texture>* anim_tex, int UP = 57);
     virtual ~Bird();
     void Update();
     void reset();
     void Movement();
-    FloatRect get_Loc();
+    FloatRect get_Bound();
     Vector2f get_Pos();
     void Draw(RenderTarget& target);
     //accessors
     static unsigned playerNr;
+    void animate();
 };

@@ -9,6 +9,7 @@
 #include <windows.h>
 #include <string>
 #define PIPE_FREQ 2.5f
+
 /***********  Switch Game Difficulty  ************/
 
 
@@ -200,12 +201,8 @@ int main()
                     auto itor = PIPE_sc.erase(PIPE_sc.begin() + i);
                     
                 }
-                
             }
-            
             score.setString(std::to_string(sc));
-            
-            
             window.draw(highest_score);
             window.draw(score);
             window.display();

@@ -10,13 +10,16 @@ class Game
 {
 private:
     RenderWindow* window;
-    std::vector<Bird> players;
     Texture pipe_t;
     Sprite pipe_s;
     Texture birdTexture;
     Sprite sprite_bg;
     int sp;
     Texture texture_bg;
+    std::vector<Bird> players;
+    std::vector<Texture> anim_frame;
+
+
 public:
     Game(RenderWindow* window);
     bool gameOver = false;
@@ -26,6 +29,7 @@ public:
     void reset();
     FloatRect get_Bird();
     Vector2f get_Pos();
+    void animate();
     //accessors
     inline RenderWindow& getWindow() {
         return *this->window;
